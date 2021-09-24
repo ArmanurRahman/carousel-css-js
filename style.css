@@ -10,8 +10,7 @@
     object-fit: cover;
 }
 .carousel__main-container {
-    background: red;
-
+    overflow: hidden;
     height: 100%;
     position: relative;
 }
@@ -19,6 +18,9 @@
     padding: 0;
     margin: 0;
     list-style: none;
+    position: relative;
+    height: 100%;
+    transition: transform 250ms ease-in;
 }
 
 .carousel__main-list-item {
@@ -58,7 +60,11 @@
     width: 15px;
     border-radius: 50%;
     border: 0;
+    cursor: pointer;
 }
 .carousel__indicator.current-slide {
     background-color: rgba(0, 0, 0, 0.7);
+}
+.is-hidden {
+    display: none;
 }
